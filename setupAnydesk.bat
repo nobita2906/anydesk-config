@@ -4,3 +4,5 @@ cd /d C:\Users\Public\Downloads\
 start /wait anydesk.exe --install "C:\Program Files (x86)\AnyDesk" --start-with-win --create-desktop-icon
 cd /d "C:\Program Files (x86)\AnyDesk
 echo Global@13 | anydesk.exe --set-password
+::Open proxy
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f
